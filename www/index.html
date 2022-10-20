@@ -168,7 +168,7 @@
         // ボタンの初期設定
         function init() {
             $('#btnA').prop('disabled', false);
-            $('#btnB').prop('disabled', false);
+            $('#btnB').prop('disabled', true);
             $('#btnC').prop('disabled', false);
             $('#btnD').prop('disabled', true);
             $('#btnE').prop('disabled', false);
@@ -195,8 +195,7 @@
         function btnAClick(e) {
             active = true;
             startTime = new Date();
-
-
+            $('#btnB').prop('disabled', false);
         }
 
         // ButtonBがクリックされた時の処理
@@ -224,6 +223,8 @@
             active = false;
             $("#time").html("Time");
             $("#remain").html("Remaining time");
+            $('#btnD').prop('disabled', true);
+            $('#btnB').prop('disabled', true);
         }
 
         // 繰り返し実行する処理
