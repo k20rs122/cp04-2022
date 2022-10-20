@@ -170,7 +170,7 @@
             $('#btnA').prop('disabled', false);
             $('#btnB').prop('disabled', false);
             $('#btnC').prop('disabled', false);
-            $('#btnD').prop('disabled', false);
+            $('#btnD').prop('disabled', true);
             $('#btnE').prop('disabled', false);
 
         }
@@ -202,6 +202,7 @@
         // ButtonBがクリックされた時の処理
         function btnBClick(e) {
             active = false;
+            $('#btnD').prop('disabled', false);
 
         }
 
@@ -216,6 +217,7 @@
 
         function btnDClick(e) {
             active = true;
+            $('#btnD').prop('disabled', true);
         }
 
         function btnEClick(e) {
